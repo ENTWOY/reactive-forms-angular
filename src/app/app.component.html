@@ -35,9 +35,9 @@
     </div>
   <div>
     <button 
-      [disabled]="form.invalid"
+      [disabled]="form.invalid || isLoading"
       type="submit">
-      Send
+      {{ isLoading ? 'Sending...' : 'Send' }}
     </button>
   </div>
 </form>

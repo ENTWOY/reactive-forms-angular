@@ -20,6 +20,8 @@ export class AppComponent implements OnInit {
     licence: ['']
   }) */
 
+  isLoading: Boolean = false
+
   constructor() {}
 
   ngOnInit(): void {
@@ -34,7 +36,11 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('form:', this.form.value);
+    this.isLoading = true
+    setTimeout(() => {
+      console.log('form:', this.form.value); // Muestra el valor del formulario después del retraso
+      this.isLoading = false; // Desactiva el estado de carga
+    }, 5000);
   }
 
   asyncforbiddenNamesValidator: AsyncValidatorFn = (
