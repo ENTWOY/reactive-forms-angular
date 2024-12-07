@@ -1,6 +1,7 @@
 # temp example
 
-`const routes: Routes = [
+```
+const routes: Routes = [
   {
     path: 'example',
     component: ExampleComponent,
@@ -15,4 +16,4 @@
     }
   }
 ];
-`
+```
